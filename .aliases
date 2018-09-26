@@ -4,4 +4,4 @@
 # e.g.
 # alias a.out './a.out'
 alias tmux="tmux -2"
-alias imgcat="~/bin/hterm-show-file.sh"
+alias imgcat="~/dotfiles/utils/imgcat.sh"
