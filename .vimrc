@@ -1,6 +1,5 @@
 set nocompatible
 set number
-syntax on
 
 if &term =~ "xterm"
   " 256 colors
@@ -17,8 +16,13 @@ if &term =~ "xterm"
   endif
 endif
 
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 set background=dark
-colorscheme slate
+let g:solarized_termcolors=256
+colorscheme solarized
 
 set laststatus=2
 
