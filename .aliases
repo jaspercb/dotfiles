@@ -1,0 +1,7 @@
+# Define your shell aliases in this .aliases file.
+# Do not put anything else (e.g. stty, setenv, mesg) into this file.
+
+# e.g.
+# alias a.out './a.out'
+alias tmux="tmux -2"
+alias imgcat="~/bin/hterm-show-file.sh"
