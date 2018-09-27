@@ -2,7 +2,6 @@ set nocompatible
 set number
 set encoding=utf-8
 
-if &term =~ "xterm"
   " 256 colors
   let &t_Co = 256
   " restore screen after quitting
@@ -15,7 +14,6 @@ if &term =~ "xterm"
     let &t_Sf = "\<Esc>[3%dm"
     let &t_Sb = "\<Esc>[4%dm"
   endif
-endif
 
 execute pathogen#infect()
 syntax on
