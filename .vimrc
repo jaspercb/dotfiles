@@ -24,10 +24,6 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
 set laststatus=2
 
 set backspace=indent,eol,start
@@ -60,3 +56,15 @@ nmap <leader>hr :GitGutterAll
 
 " FZF
 set rtp+=~/.fzf
+
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
