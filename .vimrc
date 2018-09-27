@@ -57,3 +57,6 @@ omap ah <Plug>GitGutterTextObjectOuterPending
 xmap ih <Plug>GitGutterTextObjectInnerVisual
 xmap ah <Plug>GitGutterTextObjectOuterVisual
 nmap <leader>hr :GitGutterAll
+
+" FZF
+set rtp+=~/.fzf
