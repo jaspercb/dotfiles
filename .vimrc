@@ -24,6 +24,10 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
 set laststatus=2
 
 set backspace=indent,eol,start
@@ -43,3 +47,13 @@ set ignorecase
 
 set number relativenumber
 set foldmethod=syntax
+
+" GitGutter shortcuts
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+omap ih <Plug>GitGutterTextObjectInnerPending
+omap ah <Plug>GitGutterTextObjectOuterPending
+xmap ih <Plug>GitGutterTextObjectInnerVisual
+xmap ah <Plug>GitGutterTextObjectOuterVisual
+nmap <leader>hr :GitGutterAll
