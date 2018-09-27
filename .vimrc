@@ -1,5 +1,6 @@
 set nocompatible
 set number
+set encoding=utf-8
 
 if &term =~ "xterm"
   " 256 colors
@@ -68,3 +69,6 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
+" ycm
+let g:ycm_server_python_interpreter = "/usr/bin/python2"
