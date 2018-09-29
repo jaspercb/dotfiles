@@ -72,3 +72,9 @@ let g:lightline = {
 
 " ycm
 let g:ycm_server_python_interpreter = "/usr/bin/python2"
+
+" easymotion
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
