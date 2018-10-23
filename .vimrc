@@ -19,9 +19,8 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+colorscheme gruvbox
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
 
 set laststatus=2
 
@@ -33,6 +32,7 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 nmap ; :
+nnoremap Y y$
 set history=10000
 set mouse=a
 let mapleader = " "
@@ -57,6 +57,7 @@ nmap <leader>hr :GitGutterAll
 
 " FZF
 set rtp+=~/.fzf
+nmap <leader>o :Files .<CR>
 
 " Lightline
 let g:lightline = {
@@ -78,3 +79,5 @@ map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
+
+nmap <silent> <leader>/ :nohlsearch<CR>
