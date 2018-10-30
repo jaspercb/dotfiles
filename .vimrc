@@ -37,6 +37,9 @@ set history=10000
 set mouse=a
 let mapleader = " "
 
+" Convenience: <Leader>m to save all + make
+nmap <Leader>m :wa <bar> :make
+
 " Search options
 set hlsearch
 set incsearch
