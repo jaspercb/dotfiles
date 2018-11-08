@@ -20,13 +20,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-eunuch'             " :Rename, :Close, :SudoWrite, :Chmod
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'queezythegreat/vim-YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -50,6 +51,7 @@ nnoremap Y y$
 set history=10000
 set mouse=a
 let mapleader = " "
+set so=5 " scrolloff, # of lines to display before/after line being edited
 
 " Convenience: <Leader>m to save all + make
 nmap <Leader>m :wa <bar> :make
