@@ -15,7 +15,21 @@ set encoding=utf-8
     let &t_Sb = "\<Esc>[4%dm"
   endif
 
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'junegunn/fzf.vim'
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-eunuch'             " :Rename, :Close, :SudoWrite, :Chmod
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'queezythegreat/vim-YouCompleteMe'
+
+call plug#end()
+
 syntax on
 filetype plugin indent on
 
