@@ -28,6 +28,7 @@ Plug 'tpope/vim-eunuch'             " :Rename, :Close, :SudoWrite, :Chmod
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -52,6 +53,7 @@ set history=10000
 set mouse=a
 let mapleader = " "
 set so=5 " scrolloff, # of lines to display before/after line being edited
+set switchbuf=usetab,newtab
 
 " Convenience: <Leader>m to save all + make
 nmap <Leader>m :wa <bar> :make
@@ -100,3 +102,12 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
 nmap <silent> <leader>/ :nohlsearch<CR>
+
+" Ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+" Ignore files in .gitignore
+ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+ " 
+nnoremap <Leader>. :CtrlPTag<cr>
