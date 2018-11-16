@@ -29,7 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'bronson/vim-trailing-whitespace' " :FixWhitespace, highlights trailing whitespace
+Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
 
@@ -112,3 +112,6 @@ let g:ctrlp_working_path_mode = 'ra'
  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
  " 
 nnoremap <Leader>. :CtrlPTag<cr>
+
+" Autoformat on buffer write
+au BufWrite * :Autoformat
