@@ -29,6 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'bronson/vim-trailing-whitespace' " :FixWhitespace, highlights trailing whitespace
 
 call plug#end()
 
