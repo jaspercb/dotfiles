@@ -2,18 +2,18 @@ set nocompatible
 set number
 set encoding=utf-8
 
-  " 256 colors
-  let &t_Co = 256
-  " restore screen after quitting
-  let &t_ti = "\<Esc>7\<Esc>[r\<Esc>[?47h"
-  let &t_te = "\<Esc>[?47l\<Esc>8"
-  if has("terminfo")
+" 256 colors
+let &t_Co = 256
+" restore screen after quitting
+let &t_ti = "\<Esc>7\<Esc>[r\<Esc>[?47h"
+let &t_te = "\<Esc>[?47l\<Esc>8"
+if has("terminfo")
     let &t_Sf = "\<Esc>[3%p1%dm"
     let &t_Sb = "\<Esc>[4%p1%dm"
-  else
+else
     let &t_Sf = "\<Esc>[3%dm"
     let &t_Sb = "\<Esc>[4%dm"
-  endif
+endif
 
 call plug#begin('~/.vim/plugged')
 
@@ -83,15 +83,15 @@ nmap <leader>o :Files .<CR>
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
+            \ 'colorscheme': 'wombat',
+            \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+            \ },
+            \ 'component_function': {
+            \   'gitbranch': 'fugitive#head'
+            \ },
+            \ }
 
 " ycm
 let g:ycm_server_python_interpreter = "/usr/bin/python2"
@@ -109,8 +109,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 " Ignore files in .gitignore
- let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
- " 
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+" Tag search
 nnoremap <Leader>. :CtrlPTag<cr>
 
 " Autoformat on buffer write
