@@ -112,6 +112,3 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " Tag search
 nnoremap <Leader>. :CtrlPTag<cr>
-
-" Autoformat on buffer write
-au BufWrite * :Autoformat
