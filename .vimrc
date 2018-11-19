@@ -3,7 +3,9 @@ set number
 set encoding=utf-8
 
 " 256 colors
-let &t_Co = 256
+if !has('gui_running')
+  set t_Co=256
+endif
 " restore screen after quitting
 let &t_ti = "\<Esc>7\<Esc>[r\<Esc>[?47h"
 let &t_te = "\<Esc>[?47l\<Esc>8"
@@ -19,6 +21,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'scrooloose/nerdcommenter'
@@ -83,7 +86,7 @@ nmap <leader>o :Files .<CR>
 
 " Lightline
 let g:lightline = {
-            \ 'colorscheme': 'wombat',
+            \ 'colorscheme': 'gruvbox',
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ],
             \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -92,7 +95,7 @@ let g:lightline = {
             \   'gitbranch': 'fugitive#head'
             \ },
             \ }
-
+set noshowmode
 " ycm
 let g:ycm_server_python_interpreter = "/usr/bin/python2"
 
